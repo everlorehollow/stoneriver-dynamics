@@ -12,7 +12,7 @@ export function Stats({ items }: { items: Stat[] }) {
             <div className="font-display text-5xl md:text-6xl text-white">
               {stat.value}
             </div>
-            <div className="mt-1 text-xs md:text-sm font-semibold uppercase tracking-widest text-white/60">
+            <div className="mt-1 text-sm md:text-base font-semibold uppercase tracking-widest text-white/60">
               {stat.label}
             </div>
           </div>

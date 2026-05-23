@@ -69,10 +69,10 @@ export default function SidekickPage() {
                   key={spec.label}
                   className="py-4 grid grid-cols-[140px_1fr] md:grid-cols-[180px_1fr] gap-4"
                 >
-                  <dt className="text-xs md:text-sm font-semibold uppercase tracking-widest text-[#133963]/60">
+                  <dt className="text-sm md:text-base font-semibold uppercase tracking-widest text-[#133963]/60">
                     {spec.label}
                   </dt>
-                  <dd className="text-sm md:text-base text-[#133963]">
+                  <dd className="text-base md:text-base text-[#133963]">
                     {spec.value}
                   </dd>
                 </div>

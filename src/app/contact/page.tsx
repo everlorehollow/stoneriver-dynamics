@@ -82,7 +82,7 @@ export default function ContactPage() {
 
           {/* Prefer email */}
           <div className="mt-10 pt-8 border-t border-[#133963]/10">
-            <p className="text-sm text-[#133963]/60 mb-1">Prefer email?</p>
+            <p className="text-base text-[#133963]/60 mb-1">Prefer email?</p>
             <Link
               href={`mailto:${email}`}
               className="text-[#133963] font-semibold underline underline-offset-2 hover:text-[#0c2845]"

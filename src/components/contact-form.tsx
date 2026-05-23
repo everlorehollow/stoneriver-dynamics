@@ -116,7 +116,7 @@ export function ContactForm({
       <div>
         <label
           htmlFor="message"
-          className="block text-xs font-semibold uppercase tracking-widest text-[#133963]/70 mb-2"
+          className="block text-sm font-semibold uppercase tracking-widest text-[#133963]/70 mb-2"
         >
           Message{!isFull && <span className="text-[#133963]/40"> *</span>}
         </label>
@@ -131,7 +131,7 @@ export function ContactForm({
       </div>
 
       {status === "error" && (
-        <div className="bg-red-50 border-l-4 border-red-600 p-4 text-sm text-red-800">
+        <div className="bg-red-50 border-l-4 border-red-600 p-4 text-base text-red-800">
           {errorMessage}
           {errorMessage.toLowerCase().includes("not configured") && (
             <span className="block mt-1 text-red-700/80">
@@ -148,13 +148,13 @@ export function ContactForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full inline-flex items-center justify-center px-10 py-4 bg-[#133963] text-white font-semibold tracking-wide uppercase text-sm hover:bg-[#0c2845] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center px-10 py-4 bg-[#133963] text-white font-semibold tracking-wide uppercase text-base hover:bg-[#0c2845] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Sending..." : isFull ? "Submit" : "Send Message"}
       </button>
 
       {!isFull && fullPageLinkLabel && (
-        <p className="text-center text-sm pt-2">
+        <p className="text-center text-base pt-2">
           <Link
             href="/contact"
             className="text-[#133963] hover:text-[#0c2845] underline underline-offset-2 font-semibold"
@@ -212,7 +212,7 @@ function Field({
     <div>
       <label
         htmlFor={name}
-        className="block text-xs font-semibold uppercase tracking-widest text-[#133963]/70 mb-2"
+        className="block text-sm font-semibold uppercase tracking-widest text-[#133963]/70 mb-2"
       >
         {label}
         {required && <span className="text-[#133963]/40"> *</span>}

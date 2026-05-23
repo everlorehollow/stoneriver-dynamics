@@ -75,13 +75,13 @@ export function Features({ headline, items }: FeaturesProps) {
             <h3 className="font-display text-2xl uppercase text-[#133963] tracking-wider">
               {active.title}
             </h3>
-            <p className="mt-3 text-[#133963]/75 text-sm leading-relaxed">
+            <p className="mt-3 text-[#133963]/75 text-base leading-relaxed">
               {active.captionDetail}
             </p>
           </div>
 
           {active.bullets && active.bullets.length > 0 && (
-            <ul className="mt-5 space-y-3 text-sm text-[#133963]/80 px-1">
+            <ul className="mt-5 space-y-3 text-base text-[#133963]/80 px-1">
               {active.bullets.map((b) => (
                 <li key={b} className="flex gap-3">
                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#133963] shrink-0" />
@@ -101,7 +101,7 @@ export function Features({ headline, items }: FeaturesProps) {
                     key={item.title}
                     type="button"
                     onClick={() => setActiveIndex(i)}
-                    className={`px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wide whitespace-nowrap border transition-colors ${
+                    className={`px-5 py-2.5 rounded-full text-sm font-semibold uppercase tracking-wide whitespace-nowrap border transition-colors ${
                       isActive
                         ? "bg-[#133963] text-white border-[#133963]"
                         : "bg-white text-[#133963] border-[#133963]/20"
@@ -133,7 +133,7 @@ export function Features({ headline, items }: FeaturesProps) {
                   }`}
                   aria-pressed={isActive}
                 >
-                  <span className="font-semibold uppercase tracking-wide text-sm">
+                  <span className="font-semibold uppercase tracking-wide text-base">
                     {item.title}
                   </span>
                   <Plus
@@ -147,7 +147,7 @@ export function Features({ headline, items }: FeaturesProps) {
             })}
 
             {active.bullets && active.bullets.length > 0 && (
-              <ul className="mt-6 space-y-3 text-sm text-[#133963]/80 px-2">
+              <ul className="mt-6 space-y-3 text-base text-[#133963]/80 px-2">
                 {active.bullets.map((b) => (
                   <li key={b} className="flex gap-3">
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#133963] shrink-0" />

@@ -15,12 +15,12 @@ export function Footer() {
               <Image
                 src={siteConfig.logo}
                 alt={siteConfig.businessName}
-                width={140}
-                height={48}
-                className="h-12 w-auto"
+                width={200}
+                height={68}
+                className="h-16 w-auto"
               />
             </Link>
-            <p className="text-sm text-white/70 leading-relaxed">
+            <p className="text-base text-white/70 leading-relaxed">
               {footer.tagline}
             </p>
           </div>
@@ -36,7 +36,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
+                      className="text-base text-white/70 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -54,14 +54,14 @@ export function Footer() {
             <p className="eyebrow text-white/50 mb-1">Email</p>
             <a
               href={`mailto:${footer.contact.email}`}
-              className="text-sm text-white/90 hover:text-white transition-colors"
+              className="text-base text-white/90 hover:text-white transition-colors"
             >
               {footer.contact.email}
             </a>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <span>{footer.copyright}</span>
           <a
             href={footer.builtBy.href}

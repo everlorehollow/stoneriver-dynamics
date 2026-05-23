@@ -11,14 +11,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#133963] shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src={siteConfig.logo}
             alt={siteConfig.businessName}
-            width={140}
-            height={48}
-            className="h-12 w-auto"
+            width={200}
+            height={68}
+            className="h-16 w-auto"
             priority
           />
           <span className="sr-only">{siteConfig.businessName}</span>
@@ -30,7 +30,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors uppercase"
+              className="text-base font-medium tracking-wide text-white/90 hover:text-white transition-colors uppercase"
             >
               {item.label}
             </Link>
@@ -54,7 +54,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium tracking-wide text-white/90 hover:text-white uppercase"
+              className="text-base font-medium tracking-wide text-white/90 hover:text-white uppercase"
               onClick={() => setOpen(false)}
             >
               {item.label}

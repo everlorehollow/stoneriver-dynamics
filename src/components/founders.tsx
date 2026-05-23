@@ -51,7 +51,7 @@ export function Founders({ eyebrow, headline, items }: FoundersProps) {
               <h3 className="font-display text-3xl md:text-4xl text-[#133963] uppercase">
                 {founder.name}
               </h3>
-              <p className="mt-1 text-sm font-semibold uppercase tracking-widest text-[#133963]/60">
+              <p className="mt-1 text-base font-semibold uppercase tracking-widest text-[#133963]/60">
                 {founder.title}
               </p>
               <p className="mt-4 text-[#133963]/75 leading-relaxed max-w-md">
@@ -63,7 +63,7 @@ export function Founders({ eyebrow, headline, items }: FoundersProps) {
                   href={founder.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-[#133963] hover:text-[#0c2845] text-sm font-semibold uppercase tracking-wide"
+                  className="mt-5 inline-flex items-center gap-2 text-[#133963] hover:text-[#0c2845] text-base font-semibold uppercase tracking-wide"
                   aria-label={`${founder.name} on LinkedIn`}
                 >
                   <Linkedin size={18} />
