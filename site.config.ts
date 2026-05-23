@@ -111,7 +111,7 @@ export const siteConfig = {
         title: "Co-Founder",
         bio: "Corbin leads engineering and product at Stone River Dynamics. A 3DCP innovator focused on dragging concrete printing out of the research lab and onto the jobsite, he's spent years building systems that deliver production-quality prints without the production-grade price tag — designed from the start for the realities of construction.",
         photo: "/founders/corbin-shea.webp",
-        photoPosition: "28% 30%",
+        photoPosition: "center",
         linkedin: "https://www.linkedin.com/in/corbin-shea-804383248/",
       },
       {
