@@ -111,6 +111,7 @@ export const siteConfig = {
         title: "Co-Founder",
         bio: "Corbin leads engineering and product at Stone River Dynamics. A 3DCP innovator focused on dragging concrete printing out of the research lab and onto the jobsite, he's spent years building systems that deliver production-quality prints without the production-grade price tag — designed from the start for the realities of construction.",
         photo: "/founders/corbin-shea.webp",
+        photoPosition: "28% 30%",
         linkedin: "https://www.linkedin.com/in/corbin-shea-804383248/",
       },
       {
@@ -118,6 +119,7 @@ export const siteConfig = {
         title: "Co-Founder",
         bio: "Wyatt is a former 75th Ranger Regiment combat veteran (Fire Support Sergeant / JTAC) who brings hard-won operational discipline to 3DCP. Most recently Senior Operations Manager at Alquist 3D — where he led one of the most successful 3D-printed builds to date in partnership with Walmart — he holds a PMP, a Lean Six Sigma Yellow Belt, and a degree in Organizational Leadership.",
         photo: "/founders/wyatt-johnson.webp",
+        photoPosition: "center",
         linkedin: "https://www.linkedin.com/in/wyatt-johnson52/",
       },
     ],

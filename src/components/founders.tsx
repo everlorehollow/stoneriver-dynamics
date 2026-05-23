@@ -6,6 +6,7 @@ interface Founder {
   title: string;
   bio: string;
   photo: string | null;
+  photoPosition?: string;
   linkedin: string | null;
 }
 
@@ -40,6 +41,7 @@ export function Founders({ eyebrow, headline, items }: FoundersProps) {
                     fill
                     sizes="192px"
                     className="object-cover"
+                    style={{ objectPosition: founder.photoPosition ?? "center" }}
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center bg-[#133963]/10 text-[#133963]/40">
