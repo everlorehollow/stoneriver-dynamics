@@ -7,7 +7,8 @@ const ContactSchema = z.object({
   name: z.string().min(1, "Name is required").max(100),
   email: z.string().email("Valid email is required").max(200),
   company: z.string().max(200).optional().default(""),
-  message: z.string().min(10, "Message must be at least 10 characters").max(5000),
+  phone: z.string().max(40).optional().default(""),
+  message: z.string().max(5000).optional().default(""),
   website: z.string().optional().default(""), // honeypot
 });
 
@@ -46,8 +47,9 @@ export async function POST(request: Request) {
     auth: { user, pass },
   });
 
-  const { name, email, company, message } = parsed.data;
+  const { name, email, company, phone, message } = parsed.data;
   const recipient = siteConfig.contact.formRecipient;
+  const messageBlock = message?.trim() || "(no message provided)";
 
   try {
     await transporter.sendMail({
@@ -59,9 +61,10 @@ export async function POST(request: Request) {
         `Name: ${name}`,
         `Email: ${email}`,
         `Company: ${company || "—"}`,
+        `Phone: ${phone || "—"}`,
         ``,
         `Message:`,
-        message,
+        messageBlock,
       ].join("\n"),
       html: `
         <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px;">
@@ -69,8 +72,9 @@ export async function POST(request: Request) {
           <p><strong>Name:</strong> ${escapeHtml(name)}</p>
           <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
           <p><strong>Company:</strong> ${escapeHtml(company) || "—"}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(phone) || "—"}</p>
           <p style="margin-top: 1.5em;"><strong>Message:</strong></p>
-          <p style="white-space: pre-wrap; background: #f5f5f7; padding: 1em; border-left: 3px solid #133963;">${escapeHtml(message)}</p>
+          <p style="white-space: pre-wrap; background: #f5f5f7; padding: 1em; border-left: 3px solid #133963;">${escapeHtml(messageBlock)}</p>
         </div>
       `,
     });

@@ -5,7 +5,7 @@ import { Features } from "@/components/features";
 import { Foundation } from "@/components/foundation";
 import { Founders } from "@/components/founders";
 import { ReadyToBuild } from "@/components/ready-to-build";
-import { ContactForm } from "@/components/contact-form";
+import { ContactSection } from "@/components/contact-form";
 
 export default function Home() {
   return (
@@ -33,10 +33,12 @@ export default function Home() {
         cta={siteConfig.readyToBuild.cta}
         secondaryCta={siteConfig.readyToBuild.secondaryCta}
       />
-      <ContactForm
-        headline={siteConfig.contact.headline}
-        subheadline={siteConfig.contact.subheadline}
+      <ContactSection
+        headline={siteConfig.contact.home.headline}
+        subheadline={siteConfig.contact.home.subheadline}
         email={siteConfig.contact.email}
+        variant="short"
+        fullPageLinkLabel={siteConfig.contact.home.fullPageLinkLabel}
       />
     </>
   );

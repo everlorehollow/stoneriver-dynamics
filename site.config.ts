@@ -19,17 +19,17 @@ export const siteConfig = {
 
   nav: [
     { label: "Home", href: "/" },
-    { label: "Features", href: "#features" },
-    { label: "Founders", href: "#founders" },
+    { label: "Features", href: "/#features" },
+    { label: "Founders", href: "/#founders" },
     { label: "Specs", href: "/sidekick" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ],
 
   hero: {
     eyebrow: "Introducing",
     headline: "The Sidekick",
     subheadline: "3DCP for the Real World",
-    cta: { label: "Request a Quote", href: "#contact" },
+    cta: { label: "Request a Quote", href: "/contact" },
     secondaryCta: { label: "View Specs", href: "/sidekick" },
     video: {
       mp4: "/hero/hero.mp4",
@@ -127,14 +127,51 @@ export const siteConfig = {
     headline: "Ready to Build?",
     subheadline:
       "Get full specifications and pricing for the Sidekick system. Our team is ready to discuss your project.",
-    cta: { label: "Request a Quote", href: "#contact" },
+    cta: { label: "Request a Quote", href: "/contact" },
     secondaryCta: { label: "View Full Specs", href: "/sidekick" },
   },
 
   contact: {
-    headline: "Get in Touch",
-    subheadline:
-      "Tell us about your project — we'll get back to you within one business day.",
+    // Short form embedded at the bottom of the home page
+    home: {
+      headline: "Get in Touch",
+      subheadline:
+        "Send us a quick note — or visit the full contact page for a detailed quote request.",
+      fullPageLinkLabel: "Need a detailed quote? Open the full contact form →",
+    },
+    // Dedicated /contact page
+    page: {
+      eyebrow: "Let's Talk",
+      headline: "Contact Us",
+      subheadline:
+        "Tell us about your project and we'll provide detailed pricing and specifications.",
+      whatToExpect: {
+        heading: "What to Expect",
+        items: [
+          {
+            title: "Response within 24 hours.",
+            body: "We review every inquiry personally and will follow up quickly.",
+          },
+          {
+            title: "Custom quote for your project.",
+            body: "We'll assess your needs and provide accurate pricing.",
+          },
+          {
+            title: "No obligation.",
+            body: "We're happy to answer questions even if you're still exploring.",
+          },
+        ],
+      },
+      whyStoneRiver: {
+        heading: "Why Stone River",
+        items: [
+          "Industry-standard KUKA robotics platform",
+          "Built by experienced 3DCP engineers",
+          "Designed for real job site conditions",
+          "Full technical support included",
+        ],
+      },
+    },
     formRecipient: "hello@stoneriverdynamics.com",
     email: "hello@stoneriverdynamics.com",
     phone: null as string | null,
@@ -158,7 +195,7 @@ export const siteConfig = {
         links: [
           { label: "Sidekick Overview", href: "/sidekick" },
           { label: "Full Specifications", href: "/sidekick#specifications" },
-          { label: "Request a Quote", href: "/#contact" },
+          { label: "Request a Quote", href: "/contact" },
         ],
       },
     ],
