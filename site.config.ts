@@ -37,6 +37,18 @@ export const siteConfig = {
     },
   },
 
+  announcement: {
+    eyebrow: "Announcement",
+    headline: "Meet the Sidekick",
+    subheadline:
+      "An up-close look at the system — the build, the print head, and the philosophy behind 3DCP for the real world.",
+    video: {
+      mp4: "/sidekick/announcement-720p.mp4",
+      mp4Mobile: "/sidekick/announcement-480p.mp4",
+      poster: "/sidekick/announcement-poster.jpg",
+    },
+  },
+
   stats: [
     { value: "23 FT", label: "Print Diameter" },
     { value: "10 FT", label: "Max Height" },
