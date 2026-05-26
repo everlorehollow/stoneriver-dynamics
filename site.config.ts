@@ -75,7 +75,7 @@ export const siteConfig = {
         image: "/photos/photo-7.webp",
         bullets: [
           "Code-driven pneumatic pinch valve for clean start and stop",
-          "Easy cleanout — Fast clean-out and tool-less disassembly for maintenance",
+          "Fast clean-out and tool-less disassembly for maintenance",
           "1¼\" hose compatibility, ¼\" air connection",
         ],
       },
@@ -85,7 +85,7 @@ export const siteConfig = {
         captionDetail: "Ready to go where the work is.",
         image: "/photos/photo-4.webp",
         bullets: [
-          "4 side fork pockets — pallet jack move capable",
+          "4 side accessible fork pockets — pallet jack move capable",
           "Compact transport mode: 36\" × 80\" × 72\"",
           "3,000 lbs",
           "Integrated controller for fast setup and easy transport",
@@ -93,7 +93,7 @@ export const siteConfig = {
       },
       {
         title: "Intuitive Software",
-        caption: "Easy mode with clean Rhino Integration",
+        caption: "Lifetime software access- No subscriptions",
         captionDetail: "You paid for the machine, you shouldn't have to pay to use it.",
         image: "/photos/software-screenshot.png",
         imageFit: "contain" as const,
@@ -101,7 +101,6 @@ export const siteConfig = {
         bullets: [
           "Easy mode with clean Rhino Integration",
           "Full Grasshopper access for experienced users",
-          "Lifetime Software access — No subscriptions",
         ],
       },
     ],
