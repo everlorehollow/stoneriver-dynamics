@@ -97,7 +97,7 @@ export const siteConfig = {
         caption: "Integrated with Rhino",
         captionDetail: "You paid for the machine, you shouldn't have to pay to use it.",
         image: "/photos/software-screenshot.png",
-        imageFit: "contain",
+        imageFit: "contain" as const,
         imageBg: "#0c2845",
         bullets: [
           "Integrated with Rhino",
