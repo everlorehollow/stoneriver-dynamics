@@ -21,7 +21,6 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "Features", href: "/#features" },
     { label: "Founders", href: "/#founders" },
-    { label: "Specs", href: "/sidekick" },
     { label: "Contact", href: "/contact" },
   ],
 
@@ -30,7 +29,7 @@ export const siteConfig = {
     headline: "The Sidekick",
     subheadline: "3DCP for the Real World",
     cta: { label: "Request a Quote", href: "/contact" },
-    secondaryCta: { label: "View Specs", href: "/sidekick" },
+    secondaryCta: null as { label: string; href: string } | null,
     video: {
       mp4: "/hero/hero.mp4",
       poster: "/hero/hero-poster.webp",
@@ -77,7 +76,7 @@ export const siteConfig = {
         bullets: [
           "Code-driven pneumatic pinch valve for clean start and stop",
           "Easy cleanout — Fast clean-out and tool-less disassembly for maintenance",
-          "1¼\" – 1½\" hose compatibility, ¼\" air connection",
+          "1¼\" hose compatibility, ¼\" air connection",
         ],
       },
       {
@@ -94,13 +93,13 @@ export const siteConfig = {
       },
       {
         title: "Intuitive Software",
-        caption: "Integrated with Rhino",
+        caption: "Easy mode with clean Rhino Integration",
         captionDetail: "You paid for the machine, you shouldn't have to pay to use it.",
         image: "/photos/software-screenshot.png",
         imageFit: "contain" as const,
         imageBg: "#0c2845",
         bullets: [
-          "Integrated with Rhino",
+          "Easy mode with clean Rhino Integration",
           "Full Grasshopper Access for experienced users",
           "Lifetime Software access — No subscriptions",
         ],
@@ -142,7 +141,7 @@ export const siteConfig = {
     subheadline:
       "Get full specifications and pricing for the Sidekick system. Our team is ready to discuss your project.",
     cta: { label: "Request a Quote", href: "/contact" },
-    secondaryCta: { label: "View Full Specs", href: "/sidekick" },
+    secondaryCta: null as { label: string; href: string } | null,
   },
 
   contact: {
@@ -207,8 +206,6 @@ export const siteConfig = {
       {
         heading: "Product",
         links: [
-          { label: "Sidekick Overview", href: "/sidekick" },
-          { label: "Full Specifications", href: "/sidekick#specifications" },
           { label: "Request a Quote", href: "/contact" },
         ],
       },

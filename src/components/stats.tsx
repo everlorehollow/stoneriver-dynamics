@@ -15,7 +15,7 @@ export function Stats({ items }: { items: Stat[] }) {
     <section className="bg-[#133963] py-12 md:py-16 px-6">
       <div className={`max-w-7xl mx-auto grid grid-cols-2 ${desktopCols} gap-y-10 gap-x-6`}>
         {items.map((stat) => (
-          <div key={stat.label} className="text-center md:text-left">
+          <div key={stat.label} className="text-center">
             <div className="font-display text-5xl md:text-6xl text-white">
               {stat.value}
             </div>
