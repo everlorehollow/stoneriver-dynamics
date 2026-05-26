@@ -25,7 +25,6 @@ export default function Home() {
       />
       <Foundation
         eyebrow={siteConfig.foundation.eyebrow}
-        quote={siteConfig.foundation.quote}
         body={siteConfig.foundation.body}
         tagline={siteConfig.foundation.tagline}
       />

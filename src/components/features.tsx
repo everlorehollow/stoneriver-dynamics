@@ -10,6 +10,8 @@ interface FeatureItem {
   captionDetail: string;
   image: string;
   bullets?: string[];
+  imageFit?: "cover" | "contain";
+  imageBg?: string;
 }
 
 interface FeaturesProps {
@@ -39,13 +41,16 @@ export function Features({ headline, items }: FeaturesProps) {
         {/* Mobile carousel */}
         <div className="md:hidden">
           <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm">
-            <div className="relative aspect-[4/3]">
+            <div
+              className="relative aspect-[4/3]"
+              style={active.imageBg ? { backgroundColor: active.imageBg } : undefined}
+            >
               <Image
                 src={active.image}
                 alt={active.caption}
                 fill
                 sizes="100vw"
-                className="object-cover"
+                className={active.imageFit === "contain" ? "object-contain" : "object-cover"}
                 priority={activeIndex === 0}
               />
             </div>
@@ -159,13 +164,16 @@ export function Features({ headline, items }: FeaturesProps) {
           </div>
 
           <div className="bg-white rounded-3xl shadow-sm overflow-hidden">
-            <div className="relative aspect-[5/4]">
+            <div
+              className="relative aspect-[5/4]"
+              style={active.imageBg ? { backgroundColor: active.imageBg } : undefined}
+            >
               <Image
                 src={active.image}
                 alt={active.caption}
                 fill
                 sizes="60vw"
-                className="object-cover"
+                className={active.imageFit === "contain" ? "object-contain" : "object-cover"}
                 priority={activeIndex === 0}
               />
             </div>

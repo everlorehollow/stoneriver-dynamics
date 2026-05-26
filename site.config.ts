@@ -50,7 +50,6 @@ export const siteConfig = {
   },
 
   stats: [
-    { value: "23 FT", label: "Print Diameter" },
     { value: "10 FT", label: "Max Height" },
     { value: "3,000", label: "LBS Total Weight" },
     { value: "6-AXIS", label: "Precision Control" },
@@ -65,42 +64,45 @@ export const siteConfig = {
         captionDetail: "A proven industry leader in automation.",
         image: "/photos/photo-3.webp",
         bullets: [
-          "6-axis industrial robot built for production environments",
-          "Backed by KUKA — the global leader in industrial automation",
-          "7-axis controller standard for future upgrades including 7th linear axis",
+          "6-axis industrial robot built for austere environments",
+          "Powered by KUKA — a global leader in industrial automation",
+          "Sub-millimeter precision for consistent, accurate printing",
         ],
       },
       {
-        title: "Smart Extrusion",
+        title: "Reliable Extrusion",
         caption: "Code-Driven Precision",
         captionDetail: "Clean starts, clean stops, clean cleanouts.",
         image: "/photos/photo-7.webp",
         bullets: [
-          "Code-driven extrusion start/stop through pneumatic pinch valve",
-          "Assembled easy cleanout — designed for the realities of jobsite concrete",
+          "Code-driven pneumatic pinch valve for clean start and stop",
+          "Easy cleanout — Fast clean-out and tool-less disassembly for maintenance",
           "1¼\" – 1½\" hose compatibility, ¼\" air connection",
         ],
       },
       {
         title: "Mobility",
-        caption: "Jobsite Ready",
-        captionDetail: "Fork pockets, pallet jack, integrated controller.",
+        caption: "Logistics",
+        captionDetail: "Ready to go where the work is.",
         image: "/photos/photo-4.webp",
         bullets: [
           "4 side fork pockets — pallet jack move capable",
-          "Compact transport mode: 40\" × 78\" × 64\"",
+          "Compact transport mode: 36\" × 80\" × 72\"",
+          "3,000 lbs",
           "Integrated controller for fast setup and easy transport",
         ],
       },
       {
-        title: "Capable Build Volume",
-        caption: "Big Footprint, Small Footprint",
-        captionDetail: "23 ft diameter print envelope from a compact base.",
-        image: "/photos/photo-1.webp",
+        title: "Intuitive Software",
+        caption: "Integrated with Rhino",
+        captionDetail: "You paid for the machine, you shouldn't have to pay to use it.",
+        image: "/photos/software-screenshot.png",
+        imageFit: "contain",
+        imageBg: "#0c2845",
         bullets: [
-          "Print a 14 ft long wall at 10 ft high",
-          "23 ft diameter build volume (up to 8 ft high)",
-          "19 ft diameter build volume (up to 10 ft high)",
+          "Integrated with Rhino",
+          "Full Grasshopper Access for experienced users",
+          "Lifetime Software access — No subscriptions",
         ],
       },
     ],
@@ -108,9 +110,7 @@ export const siteConfig = {
 
   foundation: {
     eyebrow: "Our Foundation",
-    quote:
-      "Stone River isn't just another 3DCP company jumping on the trend. We're here to honor the foundation laid by the true pioneers — the researchers, engineers, and builders who endured years of trials when few believed in the vision.",
-    body: "Built upon hard-won experience and lessons from the field. We've taken invaluable knowledge and focused it into a reliable, repeatable, practical process. Our peers showed it's possible — we're here to make it practical. Advancing 3DCP with sustainable materials, smarter automation, and solutions that address today's housing, infrastructure, and environmental challenges.",
+    body: "Built upon hard-won experience and lessons from the field. We've taken invaluable knowledge and focused it into a reliable, repeatable, practical process. We've shown it's possible, now we're here to make it practical. Advancing 3DCP with smarter automation and solutions that makes 3DCP a viable, mainstream building method.",
     tagline: "Built by tradeworkers, for tradeworkers",
   },
 
@@ -121,8 +121,8 @@ export const siteConfig = {
       {
         name: "Corbin Shea",
         title: "Co-Founder",
-        bio: "Corbin leads engineering and product at Stone River Dynamics. A 3DCP innovator focused on dragging concrete printing out of the research lab and onto the jobsite, he's spent years building systems that deliver production-quality prints without the production-grade price tag — designed from the start for the realities of construction.",
-        photo: "/founders/corbin-shea.webp",
+        bio: "Corbin is a former Navy veteran of 13 years. He leads engineering and product development at Stone River Dynamics. A 3DCP innovator with experience developing multiple 3DCP systems and methods. He's spent years building systems that deliver production-quality prints for real-world projects.",
+        photo: "/founders/corbin-shea.jpg",
         photoPosition: "center",
         linkedin: "https://www.linkedin.com/in/corbin-shea-804383248/",
       },
