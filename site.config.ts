@@ -100,7 +100,7 @@ export const siteConfig = {
         imageBg: "#0c2845",
         bullets: [
           "Easy mode with clean Rhino Integration",
-          "Full Grasshopper Access for experienced users",
+          "Full Grasshopper access for experienced users",
           "Lifetime Software access — No subscriptions",
         ],
       },
