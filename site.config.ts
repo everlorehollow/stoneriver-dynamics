@@ -48,6 +48,38 @@ export const siteConfig = {
     },
   },
 
+  fieldStory: {
+    eyebrow: "SIDEKICK in the Field",
+    headline: "Rebuilding Better in Altadena",
+    lead:
+      "3DCP is about building the world better — or, in some cases, rebuilding better.",
+    details: [
+      "Altadena, California",
+      "2025 Eaton Fire recovery",
+      "Alongside RIC Robotics",
+    ],
+    story: [
+      "Stone River’s SIDEKICK made its field debut alongside RIC Robotics, completing a 3D-printed wall system for an Altadena resident who lost their home in the 2025 Eaton Fire.",
+      "On site, SIDEKICK proved flexible, versatile, and easy to use. Its compact footprint and lightweight design made it easy to maneuver around the jobsite and precise enough for delicate sections.",
+    ],
+    pricing: {
+      eyebrow: "Accessible by Design",
+      value: "$169,000",
+      label: "Starting price",
+      body:
+        "These results show that success in 3DCP does not require substantial capital. SIDEKICK makes the technology accessible to smaller firms and builders — and to larger organizations looking to scale quickly.",
+    },
+    impact:
+      "SIDEKICK was built for people who want to make a difference by delivering resilient housing for homeowners like this one.",
+    closing:
+      "At Stone River Dynamics, we build the machine so you can build our future.",
+    video: {
+      mp4: "/sidekick/altadena-rebuild-720p.mp4",
+      mp4Mobile: "/sidekick/altadena-rebuild-480p.mp4",
+      poster: "/sidekick/altadena-rebuild-poster.jpg",
+    },
+  },
+
   stats: [
     { value: "10 FT", label: "Max Height" },
     { value: "3,000", label: "LBS Total Weight" },
