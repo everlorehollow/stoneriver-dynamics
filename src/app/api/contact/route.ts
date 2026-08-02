@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import nodemailer from "nodemailer";
 import { siteConfig } from "../../../../site.config";
 
 const ContactSchema = z.object({
@@ -33,51 +32,69 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const user = process.env.GMAIL_USER;
-  const pass = process.env.GMAIL_APP_PASSWORD;
-  if (!user || !pass) {
+  const resendApiKey = process.env.RESEND_API_KEY?.trim();
+  if (!resendApiKey) {
     return NextResponse.json(
       { error: "Email service not configured. Please contact us directly." },
       { status: 500 },
     );
   }
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: { user, pass },
-  });
-
   const { name, email, company, phone, message } = parsed.data;
   const recipient = siteConfig.contact.formRecipient;
+  const from =
+    process.env.RESEND_FROM_EMAIL?.trim() ||
+    `${siteConfig.businessName} Website <contact@updates.stoneriverdynamics.com>`;
   const messageBlock = message?.trim() || "(no message provided)";
 
   try {
-    await transporter.sendMail({
-      from: `"${siteConfig.businessName} Website" <${user}>`,
-      to: recipient,
-      replyTo: email,
-      subject: `New contact form submission from ${name}`,
-      text: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Company: ${company || "—"}`,
-        `Phone: ${phone || "—"}`,
-        ``,
-        `Message:`,
-        messageBlock,
-      ].join("\n"),
-      html: `
-        <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px;">
-          <h2 style="color: #133963;">New website inquiry</h2>
-          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-          <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
-          <p><strong>Company:</strong> ${escapeHtml(company) || "—"}</p>
-          <p><strong>Phone:</strong> ${escapeHtml(phone) || "—"}</p>
-          <p style="margin-top: 1.5em;"><strong>Message:</strong></p>
-          <p style="white-space: pre-wrap; background: #f5f5f7; padding: 1em; border-left: 3px solid #133963;">${escapeHtml(messageBlock)}</p>
-        </div>
-      `,
+    const resendResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${resendApiKey}`,
+        "Content-Type": "application/json",
+        "User-Agent": "StoneRiverDynamics/1.0",
+      },
+      body: JSON.stringify({
+        from,
+        to: [recipient],
+        reply_to: email,
+        subject: `New contact form submission from ${name}`,
+        text: [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Company: ${company || "—"}`,
+          `Phone: ${phone || "—"}`,
+          ``,
+          `Message:`,
+          messageBlock,
+        ].join("\n"),
+        html: `
+          <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px;">
+            <h2 style="color: #133963;">New website inquiry</h2>
+            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
+            <p><strong>Company:</strong> ${escapeHtml(company) || "—"}</p>
+            <p><strong>Phone:</strong> ${escapeHtml(phone) || "—"}</p>
+            <p style="margin-top: 1.5em;"><strong>Message:</strong></p>
+            <p style="white-space: pre-wrap; background: #f5f5f7; padding: 1em; border-left: 3px solid #133963;">${escapeHtml(messageBlock)}</p>
+          </div>
+        `,
+      }),
     });
+
+    if (!resendResponse.ok) {
+      const errorBody = await resendResponse.json().catch(() => null);
+      console.error("Contact form Resend error:", {
+        status: resendResponse.status,
+        error: getResendErrorMessage(errorBody),
+      });
+      return NextResponse.json(
+        { error: "Failed to send. Please try again or email us directly." },
+        { status: 500 },
+      );
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("Contact form email error:", err);
@@ -86,6 +103,18 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
+}
+
+function getResendErrorMessage(errorBody: unknown): string | undefined {
+  if (
+    errorBody &&
+    typeof errorBody === "object" &&
+    "message" in errorBody &&
+    typeof errorBody.message === "string"
+  ) {
+    return errorBody.message;
+  }
+  return undefined;
 }
 
 function escapeHtml(s: string): string {
