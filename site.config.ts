@@ -53,11 +53,6 @@ export const siteConfig = {
     headline: "Rebuilding Better in Altadena",
     lead:
       "3DCP is about building the world better — or, in some cases, rebuilding better.",
-    details: [
-      "Altadena, California",
-      "2025 Eaton Fire recovery",
-      "Alongside RIC Robotics",
-    ],
     story: [
       "Stone River’s SIDEKICK made its field debut alongside RIC Robotics, completing a 3D-printed wall system for an Altadena resident who lost their home in the 2025 Eaton Fire.",
       "On site, SIDEKICK proved flexible, versatile, and easy to use. Its compact footprint and lightweight design made it easy to maneuver around the jobsite and precise enough for delicate sections.",

@@ -6,7 +6,6 @@ interface FieldStoryProps {
   eyebrow: string;
   headline: string;
   lead: string;
-  details: string[];
   story: string[];
   pricing: {
     eyebrow: string;
@@ -27,7 +26,6 @@ export function FieldStory({
   eyebrow,
   headline,
   lead,
-  details,
   story,
   pricing,
   impact,
@@ -70,14 +68,6 @@ export function FieldStory({
             <p className="max-w-2xl text-xl font-medium leading-snug text-[#133963] md:text-3xl md:leading-tight">
               {lead}
             </p>
-            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold uppercase tracking-[0.12em] text-[#133963]/60">
-              {details.map((detail) => (
-                <span key={detail} className="inline-flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-[#133963]/50" />
-                  {detail}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
 
