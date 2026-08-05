@@ -154,7 +154,7 @@ export const siteConfig = {
       {
         name: "Wyatt Johnson",
         title: "Co-Founder",
-        bio: "Wyatt is a former 75th Ranger Regiment combat veteran (Fire Support Sergeant / JTAC) who brings hard-won operational discipline to 3DCP. Most recently Senior Operations Manager at Alquist 3D — where he led one of the most successful 3D-printed builds to date in partnership with Walmart — he holds a PMP, a Lean Six Sigma Yellow Belt, and a degree in Organizational Leadership.",
+        bio: "Wyatt is a former Army Ranger and combat veteran turned 3DCP operator. He led one of the industry's most successful 3D-printed builds — a 5,000-square-foot commercial structure in partnership with Walmart. He brings battlefield discipline to the jobsite.",
         photo: "/founders/wyatt-johnson.webp",
         photoPosition: "center",
         linkedin: "https://www.linkedin.com/in/wyatt-johnson52/",
