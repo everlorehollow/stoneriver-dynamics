@@ -1,7 +1,7 @@
 import { siteConfig } from "../../site.config";
 import { Hero } from "@/components/hero";
 import { SidekickAnnouncement } from "@/components/sidekick-announcement";
-import { FieldStory } from "@/components/field-story";
+import { FieldStoryPreview } from "@/components/field-story-preview";
 import { Stats } from "@/components/stats";
 import { Features } from "@/components/features";
 import { Foundation } from "@/components/foundation";
@@ -19,7 +19,7 @@ export default function Home() {
         subheadline={siteConfig.announcement.subheadline}
         video={siteConfig.announcement.video}
       />
-      <FieldStory {...siteConfig.fieldStory} />
+      <FieldStoryPreview story={siteConfig.fieldStory} />
       <Stats items={siteConfig.stats} />
       <Features
         headline={siteConfig.features.headline}

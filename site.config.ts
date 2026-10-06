@@ -20,6 +20,7 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Features", href: "/#features" },
+    { label: "Altadena Project", href: "/projects/altadena" },
     { label: "Founders", href: "/#founders" },
     { label: "Contact", href: "/contact" },
   ],
@@ -49,8 +50,18 @@ export const siteConfig = {
   },
 
   fieldStory: {
+    href: "/projects/altadena",
     eyebrow: "SIDEKICK in the Field",
     headline: "Rebuilding Better in Altadena",
+    summary:
+      "SIDEKICK made its field debut alongside RIC Robotics, printing a wall system for an Altadena homeowner rebuilding after the Eaton Fire. See the system at work and explore the story behind the build.",
+    news: {
+      videoId: "ysG9KmtDQ7k",
+      title: "FOX 11 coverage of the Altadena rebuild",
+      description:
+        "FOX 11 News visits the Altadena rebuild with PCI Builders, exploring a new approach to rebuilding after the Eaton Fire.",
+      watchUrl: "https://www.youtube.com/watch?v=ysG9KmtDQ7k",
+    },
     lead:
       "3DCP is about building the world better — or, in some cases, rebuilding better.",
     story: [
@@ -225,6 +236,7 @@ export const siteConfig = {
         links: [
           { label: "Home", href: "/" },
           { label: "Features", href: "/#features" },
+          { label: "Altadena Project", href: "/projects/altadena" },
           { label: "Founders", href: "/#founders" },
           { label: "Contact", href: "/#contact" },
         ],

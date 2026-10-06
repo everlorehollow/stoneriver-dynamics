@@ -25,7 +25,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav aria-label="Main navigation" className="hidden lg:flex gap-8 items-center">
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}
@@ -39,9 +39,11 @@ export function Header() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-white"
+          className="lg:hidden p-2 text-white"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -49,7 +51,7 @@ export function Header() {
 
       {/* Mobile nav */}
       {open && (
-        <nav className="md:hidden border-t border-white/10 bg-[#133963] px-6 py-4 flex flex-col gap-4">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" className="lg:hidden border-t border-white/10 bg-[#133963] px-6 py-4 flex flex-col gap-4">
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}
