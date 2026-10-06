@@ -2,10 +2,13 @@ import type { SiteConfig } from "../../site.config";
 
 type FieldStoryProps = Pick<
   SiteConfig["fieldStory"],
-  "story" | "pricing" | "impact" | "closing" | "video"
+  "eyebrow" | "headline" | "lead" | "story" | "pricing" | "impact" | "closing" | "video"
 >;
 
 export function FieldStory({
+  eyebrow,
+  headline,
+  lead,
   story,
   pricing,
   impact,
@@ -14,21 +17,32 @@ export function FieldStory({
 }: FieldStoryProps) {
   return (
     <section
-      id="field-footage"
-      aria-labelledby="field-footage-title"
+      id="altadena"
+      aria-labelledby="altadena-story-title"
       className="scroll-mt-28 bg-white px-6 py-16 md:py-20"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-8 flex flex-col gap-3 border-b border-[#133963]/15 pb-6 sm:flex-row sm:items-end sm:justify-between">
-          <h2
-            id="field-footage-title"
-            className="font-display text-4xl uppercase text-[#133963] md:text-5xl"
-          >
-            SIDEKICK on the jobsite
-          </h2>
-          <p className="text-sm font-medium text-[#133963]/70">
-            Altadena, California
-          </p>
+        <div className="mb-10 grid gap-6 border-b border-[#133963]/15 pb-8 lg:grid-cols-2 lg:items-end lg:gap-12">
+          <div>
+            <p className="eyebrow mb-4 text-[#133963]/70">{eyebrow}</p>
+            <h2
+              id="altadena-story-title"
+              className="font-display text-5xl uppercase text-[#133963] md:text-6xl"
+            >
+              {headline}
+            </h2>
+          </div>
+          <div>
+            <p className="max-w-xl text-xl font-medium leading-snug text-[#133963]/80 md:text-2xl">
+              {lead}
+            </p>
+            <a
+              href="#news-coverage"
+              className="mt-4 inline-flex min-h-11 items-center gap-2 font-semibold text-[#133963] underline decoration-[#133963]/35 underline-offset-4 hover:decoration-[#133963] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#133963]"
+            >
+              Watch the FOX 11 coverage <span aria-hidden="true">↓</span>
+            </a>
+          </div>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-center lg:gap-12">
